@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — PetNutriPal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --sage: #5D7369; --sage-dark: #4B5D55; --sage-deeper: #3A4A3E;
+            --sage-muted: rgba(93,115,105,0.08); --cream: #FDFBF7; --beige: #F2F0EB;
+            --border: #E8E6DF; --text-primary: #2D2D2D; --text-secondary: #5A5A5A;
+            --text-tertiary: #8C8C85; --text-muted: #B0AEA8; --white: #FFFFFF;
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+            background: var(--cream); color: var(--text-primary);
+            -webkit-font-smoothing: antialiased;
+        }
+        ::selection { background: var(--sage); color: var(--white); }
+        .nav {
+            position: sticky; top: 0; z-index: 100;
+            background: rgba(253,251,247,0.92); backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border); padding: 16px 0;
+        }
+        .nav-inner {
+            max-width: 800px; margin: 0 auto; padding: 0 32px;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .nav-logo {
+            display: flex; align-items: center; gap: 10px;
+            text-decoration: none; color: var(--text-primary);
+        }
+        .nav-logo-icon {
+            width: 36px; height: 36px; background: var(--sage); border-radius: 10px;
+            display: flex; align-items: center; justify-content: center; font-size: 18px;
+        }
+        .nav-logo-text { font-weight: 600; font-size: 18px; letter-spacing: -0.3px; }
+        .nav-logo-text span { color: var(--sage); }
+        .nav-back {
+            font-size: 14px; font-weight: 500; color: var(--sage);
+            text-decoration: none; transition: opacity 0.2s;
+        }
+        .nav-back:hover { opacity: 0.7; }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 32px; }
+        .hero-legal {
+            padding: 60px 0 40px; text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+        .hero-legal h1 {
+            font-size: 32px; font-weight: 700; letter-spacing: -1px; margin-bottom: 12px;
+        }
+        .hero-legal .updated {
+            font-size: 13px; color: var(--text-muted); font-weight: 500;
+        }
+        .hero-legal .intro {
+            font-size: 15px; color: var(--text-secondary); line-height: 1.6;
+            max-width: 500px; margin: 16px auto 0;
+        }
+        .content { padding: 48px 0 80px; }
+        .section { margin-bottom: 40px; }
+        .section-title {
+            display: flex; align-items: center; gap: 10px;
+            font-size: 18px; font-weight: 600; margin-bottom: 16px;
+            padding-bottom: 12px; border-bottom: 1px solid var(--border);
+        }
+        .section-icon {
+            width: 32px; height: 32px; border-radius: 50%;
+            background: var(--sage-muted); display: flex; align-items: center;
+            justify-content: center; font-size: 14px; flex-shrink: 0;
+        }
+        .section p {
+            font-size: 15px; color: var(--text-secondary); line-height: 1.7;
+            margin-bottom: 12px; font-weight: 300;
+        }
+        .section p:last-child { margin-bottom: 0; }
+        .section strong { font-weight: 500; color: var(--text-primary); }
+        .section ul {
+            list-style: none; padding: 0; margin: 12px 0;
+        }
+        .section ul li {
+            padding: 8px 0 8px 20px; position: relative;
+            font-size: 15px; color: var(--text-secondary); line-height: 1.6; font-weight: 300;
+        }
+        .section ul li::before {
+            content: ''; position: absolute; left: 0; top: 16px;
+            width: 6px; height: 6px; border-radius: 50%;
+            background: var(--sage-muted);
+        }
+        .highlight-card {
+            background: var(--white); border: 1px solid var(--border);
+            border-radius: 16px; padding: 24px; margin: 20px 0;
+        }
+        .highlight-card.sage { border-color: rgba(93,115,105,0.2); }
+        .sub-heading {
+            font-size: 12px; font-weight: 600; color: var(--sage);
+            text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 8px;
+        }
+        .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 24px 0; }
+        .trust-card {
+            background: var(--white); border: 1px solid var(--border);
+            border-radius: 14px; padding: 20px;
+        }
+        .trust-card .icon { font-size: 20px; margin-bottom: 8px; }
+        .trust-card h3 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+        .trust-card p { font-size: 13px; color: var(--text-tertiary); line-height: 1.5; font-weight: 300; }
+        .contact-box {
+            background: var(--beige); border-radius: 14px; padding: 24px;
+            margin-top: 40px; text-align: center;
+        }
+        .contact-box a {
+            color: var(--sage); font-weight: 600; text-decoration: none;
+        }
+        .contact-box a:hover { text-decoration: underline; }
+        .footer {
+            padding: 32px 0; border-top: 1px solid var(--border);
+            text-align: center;
+        }
+        .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 12px; }
+        .footer-links a { font-size: 13px; color: var(--text-tertiary); text-decoration: none; }
+        .footer-links a:hover { color: var(--sage); }
+        .footer-copy { font-size: 12px; color: var(--text-muted); }
+        @media (max-width: 600px) {
+            .container { padding: 0 20px; }
+            .hero-legal h1 { font-size: 26px; }
+            .trust-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">
+                <img src="data:image/png;base64,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" alt="PetNutriPal" style="height:36px;width:auto;">
+                <div class="nav-logo-text">PetNutri<span>Pal</span></div>
+            </a>
+            <a href="/" class="nav-back">← Back to Home</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="hero-legal">
+            <h1>Privacy Policy</h1>
+            <div class="updated">Last Updated: February 14, 2026</div>
+            <p class="intro">We respect your privacy and are committed to protecting your pet and personal data. Transparency is at the core of PetNutriPal.</p>
+        </div>
+
+        <div class="content">
+            <div class="trust-grid">
+                <div class="trust-card"><div class="icon">🚫</div><h3>We never sell your data</h3><p>Your personal information is yours. We do not sell it to advertisers or third parties.</p></div>
+                <div class="trust-card"><div class="icon">📥</div><h3>Total data control</h3><p>You can request a full export of your pet's health logs and profile data at any time.</p></div>
+                <div class="trust-card"><div class="icon">🔒</div><h3>Encrypted at every layer</h3><p>All pet health data, scan results, and personal information are encrypted in transit and at rest.</p></div>
+            </div>
+
+            <div class="section">
+                <div class="section-title"><div class="section-icon">📄</div> Information We Collect</div>
+                <p>We collect information necessary to provide accurate nutritional advice for your pet, including:</p>
+                <ul>
+                    <li><strong>Account Details:</strong> Name, email address, and notification preferences.</li>
+                    <li><strong>Pet Profile:</strong> Breed, age, weight, sex, allergies, health conditions, and activity levels.</li>
+                    <li><strong>Scan History:</strong> Photos and ingredient lists from products you scan, along with generated scores.</li>
+                    <li><strong>Health Check-ins:</strong> Daily tracking data including digestion, energy, coat condition, and appetite ratings.</li>
+                    <li><strong>Device Info:</strong> Device model, OS version, and app version for crash reporting and compatibility.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <div class="section-title"><div class="section-icon">❤️</div> Pet Health & Food Data</div>
+                <p>Data regarding your pet's dietary intake and health markers is encrypted. We use this exclusively to generate personalized nutrition scores and health insights. Anonymized data may be used to improve our breed-specific scoring algorithms unless you opt out in Settings.</p>
+            </div>
+
+            <div class="section">
+                <div class="section-title"><div class="section-icon">🤖</div> AI & Scoring Data</div>
+                <p>PetNutriPal uses AI models to analyze ingredients and generate safety scores. When you scan a product, the ingredient list is sent to our secure servers for analysis. We retain anonymized scan data to improve scoring accuracy across breeds and health conditions.</p>
+                <p>Your individual scan results are associated with your account and accessible only to you. We do not share identifiable scan data with food manufacturers, retailers, or any third party.</p>
+            </div>
+
+            <div class="section">
+                <div class="section-title"><div class="section-icon">🔗</div> Data Sharing & Third Parties</div>
+                <p>We engage trusted third-party service providers strictly necessary for operating PetNutriPal:</p>
+                <ul>
+                    <li><strong>Supabase:</strong> Secure cloud database and authentication.</li>
+                    <li><strong>RevenueCat:</strong> Subscription and payment processing.</li>
+                    <li><strong>Anthropic (Claude AI):</strong> Ingredient analysis and scoring. Only ingredient text is sent — never your personal or pet identity data.</li>
+                    <li><strong>Sentry:</strong> Crash reporting and performance monitoring. No personal data is included.</li>
+                    <li><strong>Expo:</strong> Push notification delivery.</li>
+                </ul>
+                <p>All partners are bound by data processing agreements and comply with applicable data protection regulations.</p>
+            </div>
+
+            <div class="section">
+                <div class="section-title"><div class="section-icon">🔔</div> Push Notifications</div>
+                <p>If you grant notification permission, we send recall alerts, health check-in reminders, and score updates. Your push token is stored securely and used solely for delivering notifications. You can disable notifications at any time in your device settings or within the app.</p>
+            </div>
+
+            <div class="section">
+                <div class="section-title"><div class="section-icon">🔐</div> Data Security</div>
+                <p>We implement industry-standard security measures including TLS encryption for all data in transit, AES-256 encryption for sensitive health data at rest, secure token-based authentication, and row-level security policies ensuring users can only access their own data.</p>
+            </div>
+
+            <div class="section">
+                <div class="section-title"><div class="section-icon">⏱️</div> Data Retention</div>
+                <p>Your data is retained for as long as your account is active. Scan history older than 24 months may be archived but remains accessible. Upon account deletion, all personal data is permanently removed within 30 days. Anonymized aggregate data used for algorithm training may be retained indefinitely.</p>
+            </div>
+
+            <div class="section">
+                <div class="section-title"><div class="section-icon">👥</div> Children's Privacy</div>
+                <p>PetNutriPal is not directed at children under 13. We do not knowingly collect personal information from children. If we become aware that a child under 13 has provided us with personal data, we will delete that information promptly.</p>
+            </div>
+
+            <div class="contact-box">
+                <p style="font-size:15px;color:var(--text-secondary);margin-bottom:12px;">Questions about this Privacy Policy?</p>
+                <a href="mailto:privacy@petnutripal.com">privacy@petnutripal.com</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="/privacy.html">Privacy Policy</a>
+                <a href="/terms.html">Terms of Service</a>
+                <a href="mailto:support@petnutripal.com">Support</a>
+            </div>
+            <div class="footer-copy">© 2025 PetNutriPal. All rights reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>
